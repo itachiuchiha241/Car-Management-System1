@@ -1,0 +1,595 @@
+/* Navbar Styles */
+body{
+    background:#090909;
+    padding-top: 55px;
+}
+
+
+/* Styles for PC */
+@media (min-width: 768px) {
+    .navbar {
+        padding-top: 20px; /* Increase padding for larger screens */
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 767px) {
+    .navbar {
+        padding-top: 10px; /* Decrease padding for smaller screens */
+    }
+}
+
+
+.navbar-brand img {
+    margin-right: 406px;
+    margin-left: -548px;
+    margin-top: -89px;
+    width: 156px;
+    height: auto;
+    margin-bottom: -96px;
+}
+
+/*about us style*/
+
+.container.about-us {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    background-color: transparent;
+    max-width: 800px;
+    color: white;
+    filter: drop-shadow(0px 0px 2px);
+}
+
+.about-hed {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-us .para {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.about-us h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.about-us ul {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.about-us li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.about-us blockquote {
+    font-style: italic;
+    border-left: 3px solid #007bff;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.about-us .row {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.about-us .fw-bold {
+    font-weight: bold;
+    color:white;
+}
+
+.about-us .bi {
+    margin-right: 5px;
+    color: rgb(255, 255, 255);
+}
+
+/*about us style*/
+
+.navbar {
+    background: linear-gradient(rgba(103, 98, 98, 0.44), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px; 
+    margin: 5px;
+    margin-right: -20px;
+    margin-left: -20px;
+    margin-top: 0.01%;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it span the entire width */
+    z-index: 1000; 
+}
+
+.navbar .container {
+    max-width: 1861px;
+}
+
+.navbar-brand {
+    color: #faf7f7; /* White color for brand */
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: -238px;
+    margin-left: 20px;
+}
+
+
+.navbar-toggler {
+    border-color: transparent; /* Remove border color */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f3778e; /* Text color on hover */
+}
+
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item.login-link {
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.dropdown {
+    margin-left: -6px;
+    margin-right: 115px;
+}
+
+.dropdown:hover{
+    background-color:transparent;
+    color: white;
+    border-radius: 2px;
+}
+
+.dropdown-toggle{
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-menu {
+    background-color: transparent; /* Set background color to transparent */
+    border: none; /* Remove border */
+    padding: 0; /* Remove default padding */
+}
+
+.dropdown-item {
+    color: white; 
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0); /* Add hover effect */
+    color: white;
+}
+
+
+/* Search Form */
+.navbar form {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.735); /* White color with 30% opacity for search input */
+}
+
+.btn.btn-outline-success[type="submit"] {
+    border-radius: 7px;
+    color: #eadfdf; /* White color for submit button */
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid #1a1a1a; /* White border for submit button */
+    margin-right: 28px;
+    margin-left: 11px;
+}
+
+.btn.btn-outline-success[type="submit"]:hover {
+    color: #ffffff; /* Black color on hover */
+    background-color: #272424; /* White background color on hover */
+    border-color: #bdbdbd; /* White border color on hover */
+}
+
+/* Main Content Styles */
+.list-group-item {
+    background-color: #ffffff; /* White background color for list items */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* List item box shadow */
+}
+
+.list-group-item h3 {
+    margin-bottom: 10px;
+    color: #f0eeee; /* Heading color */
+}
+
+.list-group-item p {
+    color: #f1eded; /* Text color */
+}
+
+
+/* Img Silder start*/
+.container .imgSlider {
+    position: relative;
+}
+
+.container .wrapper {
+    width: 62vw;
+    height: 79vh;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0.6);
+    margin: 5rem auto;
+    overflow: hidden;
+}
+
+.container .wrapper-holder {
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    height: 100%;
+    width: 100%;
+    animation: slider 30s ease-in-out infinite alternate;
+}
+
+.container #slider-img-1 {
+    height: 676px;
+    background-image: url(/media/carimage/Mercedes-Benz_AMG_GT.png);
+    background-position: bottom;
+    background-size: contain;
+    width: 335vh;
+}
+.container #slider-img-2 {
+    height: 627px;
+    background-image: url(/media/carimage/Toyota_Supra_mk5.jpg);
+    background-position: bottom;
+    background-size: contain;
+    width: 342vh;
+}
+
+.container #slider-img-3 {
+    height: 652px;
+    background-image: url(/media/carimage/Toyota_Supra_mk4.jpg);
+    background-position: bottom;
+    background-size: contain;
+    width: 357vh;
+}
+
+.container #slider-img-4 {
+    height: 627px;
+    background-image: url(/media/carimage/Hyundai_Exter.jpg);
+    background-position: bottom;
+    background-size: contain;
+    width: 315vh;
+}
+
+.container .button-holder .button{
+    background-color: white;
+    width: 33px;
+    height: 5px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0.3rem;
+}
+
+.container .button-holder{
+    position: absolute;
+    left: 45%;
+    margin-top: -108px;
+}
+
+
+.button:hover{
+    box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.418);
+}
+
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+}
+
+/*Img Slider End*/
+
+
+
+/* Car Details start*/
+.card {
+    background: #090909;
+    border: 1px solid #ffffff; /* Add a border around the card */
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5)); /* Add drop shadow effect */
+    border-radius: 15px; /* Add rounded corners to the card */
+    margin-bottom: 6px; /* Add some space between cards */
+}
+
+.card-body {
+    text-align: center; /* Center-align text within the card body */
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.5));
+}
+
+.card-body .btn {
+    display: inline-block;
+    color: white;
+    filter: drop-shadow(0px 2px 5px rgba(255, 255, 255, 0.5));
+}
+
+
+/* CSS */
+.white-text {
+    border: 1px solid #ffffff; 
+    border-radius: 27px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0px 2px 5px rgba(255, 255, 255, 0.5));
+    color: white;
+}
+
+/* Style for buttons */
+.white-box .btn {
+    background-color: rgba(125, 38, 38, 0.42);
+    color: #000000; 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-right: 3px;
+}
+
+/* Hover effect for buttons */
+.white-box .btn:hover {
+    background-color: rgba(125, 38, 38, 0.7);
+    color: #ffffff; /* White text color on hover */
+}
+
+
+.white-box {
+    border: 1px solid #ffffff0e; 
+    border-radius: 27px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Car Details End  */
+
+
+
+/* Car in cart and Customer css start */
+.cuscart {
+    background: linear-gradient(rgba(103, 98, 98, 0.44), rgb(255, 255, 255, 0));
+    border: 1px solid #ffffff0e; 
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navgti {
+    background-color: #55555500;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffffff63;
+    filter: drop-shadow(0px 0px 0px);
+}
+
+p.trun {
+    color: white;
+}
+
+
+/* Proceed to Payment button */
+.payto {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgb(255 255 255 / 11%);
+    color: #ff000096;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    margin-top: 1.5rem;
+}
+
+/* Style for the Proceed to Payment button on hover */
+.payto:hover {
+    background-color: #00000055; /* Change background color on hover */
+}
+
+
+/* Car cart and Customer-css end */
+
+
+
+
+
+/* Footer Styles */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    background-color: rgba(227, 227, 236, 0.8);
+    color: #ffffff;
+     width: 100%; 
+}
+
+.col-md-3{
+    color: white;
+}
+
+.col-md-3,
+.col-md-4 {
+    color: white;
+}
+
+
+.row.mt-5 {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(54, 52, 52, 0.44));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 74px;
+}
+
+footer h5 {
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for footer heading */
+}
+
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: #ffffff; /* White color for hr */
+}
+
+.anchor {
+    text-decoration: none;
+    color: #ffffff; /* White color for anchor links */
+    margin-left: 5px;
+}
+
+.anchor:hover {
+    color: rgb(255, 255, 255); /* Purple color on hover */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Align icons vertically */
+    align-items: center; /* Center icons horizontally */
+    margin-top: 18px;
+    margin-right: 300px;
+}
+
+/* Facebook icon color */
+.social-icon.fb i {
+    color: #3b5998; /* Facebook color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Instagram icon color */
+.social-icon.insta i {
+    color: #e4405f; /* Instagram color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* LinkedIn icon color */
+.social-icon.linkedin i {
+    color: #0077b5; /* LinkedIn color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Twitter icon color */
+.social-icon.twitter i {
+    color: #1da1f2; /* Twitter color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Hover effect */
+.social-icon:hover i {
+    filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+
+.social-icon {
+    margin: 10px; /* Adjust margin between icons */
+}
+
+/* Adjusting responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        text-align: left;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Custom CSS for Footer */
+
+/* Custom CSS for Login Form */
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Red shadow effect with opacity */
+    animation: 1s login alternate infinite;
+}
+
+.btn-login {
+    background-color: rgba(58, 58, 58, 0.603);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.link {
+    text-decoration: none;
+    color: rgb(132, 53, 243);
+    margin-left: 5px;
+}
+
+/* Custom CSS for Registration Form */
+.register-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+    animation: 1s register alternate infinite;
+}
+
+.btn-register {
+    background-color: rgba(58, 58, 58, 0.603);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@keyframes login{
+    0%{
+        filter: drop-shadow(0px 0px 1px) white;
+    }
+    50%{
+        filter: drop-shadow(0px 0px 1px) rgb(255, 255, 255);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 255));
+    }
+}
+
+@keyframes register{
+    0%{
+        filter: drop-shadow(0px 0px 1px) white;
+    }
+    50%{
+        filter: drop-shadow(0px 0px 1px) rgb(255, 255, 255);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 0px rgb(255, 255, 255));
+    }
+}

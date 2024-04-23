@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Payment Site {% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="container">
+        <h1>Proceed To Pay</h1>
+        <p>Total amount: {{ data.amount / 100 }} INR</p>
+
+        <form id="paymentForm" action="{% url 'payment_confirmation' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="total_amount" value="{{ data.amount }}">
+            <input type="hidden" name="order_id" value="{{ data.id }}">
+            <input type="hidden" name="receipt" value="{{ data.receipt }}">
+
+            <!-- Razorpay script to load the payment widget -->
+            <script src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_test_Jqq90822jBWYgu"  <!-- Replace with your actual Razorpay key -->
+                    data-amount="{{ data.amount }}"
+                    data-currency="INR"
+                    data-order_id="{{ data.id }}"
+                    data-buttontext="Pay with Razorpay"
+                    data-name="Your Company Name"
+                    data-description="Payment for Order"
+                    data-prefill.name="{{ uname }}"
+                    data-prefill.email="{{ request.user.email }}"
+                    data-theme.color="#F37254">
+            </script>
+
+            <button type="button" onclick="payWithRazorpay()">Pay with Razorpay</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function payWithRazorpay() {
+        var form = document.getElementById("paymentForm");
+        form.submit();
+    }
+</script>
+
+{% endblock %}

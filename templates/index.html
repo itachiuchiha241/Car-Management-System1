@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block 'main' %}
+<div class="container">
+    <div class="row mt-3">
+
+        <div class="col-md-12">
+            <div class="row">
+                {% for x in products %}
+                <div class="col-md-3 mt-4">
+                    <div class="card" style="width: 100%;">
+                        <img src="{{x.pimage.url}}" class="card-img-top" alt="..." width="100%" class="pity">
+                        <div class="card-body">
+                            <h5 class="card-title">{{x.name}}</h5>
+                            <p class="card-text">Rs.{{x.price}}</p>
+                            {% if x.cat == 1 %}
+                                <p class="card-text">SUV</p>
+                            {% elif x.cat == 2 %}
+                                <p class="card-text">Sedan</p>
+                            {% elif x.cat == 3 %}
+                                <p class="card-text">Hatchback</p>
+                            {% endif %}
+                            <a href="/pdetails/{{x.id}}" class="btn btn" >Learn more</a>
+                        </div>
+                    </div>           
+                </div><!-- Product End -->
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock 'main' %}
